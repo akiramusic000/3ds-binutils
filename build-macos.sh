@@ -3,9 +3,6 @@ PREFIX="$(pwd)/build"
 mkdir source
 wget -qO- https://ftp.gnu.org/gnu/binutils/binutils-2.42.tar.xz | tar -xJ -C source --strip-components=1
 cd source
-for patch in ../*.patch; do
-  patch -N -p1 -i "$patch"
-done
 export CFLAGS="-arch arm64 -arch x86_64 -mmacosx-version-min=10.11"
 if command -v nproc >/dev/null 2>&1; then
   JOBS="$(nproc)"
