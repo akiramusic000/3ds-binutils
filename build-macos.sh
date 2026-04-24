@@ -16,7 +16,7 @@ case "$JOBS" in
   ''|*[!0-9]*) JOBS=4 ;;
 esac
 
-./configure --target=powerpc-eabi --prefix="$PREFIX" --disable-nls --disable-shared --disable-gprof --without-zstd --with-system-zlib
+./configure --target=arm-none-eabi --prefix="$PREFIX" --disable-nls --disable-shared --disable-gprof --without-zstd --with-system-zlib
 make -j"$JOBS" configure-host
 make -j"$JOBS"
 make install-strip

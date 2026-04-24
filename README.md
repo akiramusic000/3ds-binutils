@@ -1,1 +1,1 @@
-Cross-platform builds of `powerpc-eabi` binutils.
+Cross-platform builds of `arm-none-eabi` binutils.

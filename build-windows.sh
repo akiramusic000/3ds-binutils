@@ -6,7 +6,7 @@ cd source
 for patch in ../*.patch; do
   patch -N -p1 -i "$patch"
 done
-./configure --target=powerpc-eabi --prefix="$PREFIX" --disable-nls --disable-shared --disable-gprof --without-zstd
+./configure --target=arm-none-eabi --prefix="$PREFIX" --disable-nls --disable-shared --disable-gprof --without-zstd
 make -j$(nproc) configure-host
 make -j$(nproc)
 make install-strip
